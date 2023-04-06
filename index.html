@@ -48,5 +48,24 @@
 		<h1>Happy Birthday Kian!</h1>
 		<p>Web designer and maintenance: Seyed AmirPouya Moeini</p>
 	</div>
+	
+	<div class="countdown" style="position: fixed; bottom: 0; background-color: #FFF; padding: 10px;">
+	<span id="countdown">5</span>
+</div>
+
+<script>
+	var count = 5;
+	var countdownElement = document.getElementById("countdown");
+
+	var countdownInterval = setInterval(function() {
+		if (count === 0) {
+			clearInterval(countdownInterval);
+			return;
+		}
+		count--;
+		countdownElement.innerText = count;
+	}, 1000);
+</script>
+
 </body>
 </html>
