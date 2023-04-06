@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body {
-			background-color: #1a4c71;
+			background-color: #000000;
 			font-family: Arial, sans-serif;
 			font-size: 16px;
 			margin: 0;
@@ -39,10 +39,21 @@
 		}
 		
 		h1 {
-			color: #c0392b;
+			color: #e6eae7;
 			font-size: 48px;
 			margin: 0;
 			text-align: center;
+		}
+
+		#show_bg_2 {
+			background-image:
+			linear-gradient(to bottom, rgba(228, 231, 245, 0.52), rgba(19, 16, 210, 0.73)),
+			url('https://i.ibb.co/xHpJSJR/Sadra.jpg');
+			width: 80%;
+			height: 60%;
+			background-size: cover;
+			color: white;
+			padding: 20px;
 		}
 		
 		p {
@@ -52,11 +63,12 @@
 			text-align: center;
 		}
 	</style>
-	<meta http-equiv="refresh" content="20;url=https://www.google.com">
+	<meta http-equiv="refresh" content="5;url=https://www.google.com">
 </head>
 <body>
 	<div class="container">
-		<img class="logo" src="https://i.ibb.co/xHpJSJR/Sadra.jpg" alt="Kian's Logo">
+		<!-- <img class="logo" src="https://i.ibb.co/xHpJSJR/Sadra.jpg" alt="Kian's Logo"> -->
+		<div id='show_bg_2'></div>
 		<h1>Happy Birthday Kian!</h1>
 		<p>Web designer and maintenance: Seyed AmirPouya Moeini</p>
 	</div>
@@ -66,7 +78,7 @@
 </div>
 
 <script>
-	var count = 20;
+	var count = 5;
 	var countdownElement = document.getElementById("countdown");
 
 	var countdownInterval = setInterval(function() {
