@@ -8,16 +8,25 @@
 		body {
 			background-color: #000000;
 			font-family: Arial, sans-serif;
-			font-size: 16px;
+			font-size: 1em;
 			margin: 0;
 			padding: 0;
 		}
 		
 		#countdown {
 			  color: #7f8c8d;
-			  font-size: 35px;
+			  font-size: 2em;
 			  margin: 0 auto;
 			  position: fixed;
+			  bottom: 2.5em;
+			  left: 0;
+			  right: 0;
+			  text-align: center;
+		}
+
+		#audio {
+			margin: 0 auto;
+			position: fixed;
 			  bottom: 20px;
 			  left: 0;
 			  right: 0;
@@ -33,10 +42,6 @@
 			height: 100vh;
 		}
 		
-		.logo {
-			max-width: 600px;
-			margin-bottom: 40px;
-		}
 		
 		h1 {
 			color: #e6eae7;
@@ -53,7 +58,7 @@
 			height: 60%;
 			background-size: cover;
 			color: white;
-			padding: 20px;
+			
 		}
 		
 		p {
@@ -63,22 +68,22 @@
 			text-align: center;
 		}
 	</style>
-	<meta http-equiv="refresh" content="5;url=https://www.google.com">
+	<meta http-equiv="refresh" content="2000;url=https://www.google.com">
 </head>
 <body>
 	<div class="container">
 		<!-- <img class="logo" src="https://i.ibb.co/xHpJSJR/Sadra.jpg" alt="Kian's Logo"> -->
 		<div id='show_bg_2'></div>
 		<h1>Happy Birthday Kian!</h1>
-		<p>Web designer and maintenance: Seyed AmirPouya Moeini</p>
+		<p>Web designer and maintenance: Seyed AmirPouya Moeini (and others)</p>
 	</div>
 	
 	<div class="countdown" style="position: fixed; bottom: 0; background-color: #FFF; padding: 10px;">
-	<span id="countdown">5</span>
+	<span id="countdown">20</span>
 </div>
 
 <script>
-	var count = 5;
+	var count = 20;
 	var countdownElement = document.getElementById("countdown");
 
 	var countdownInterval = setInterval(function() {
@@ -91,5 +96,21 @@
 	}, 1000);
 </script>
 
+<audio id="audio" controls>
+	<source src="voice.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+  </audio>
+  
+  <script>
+	// Get the audio element
+	var audio = document.getElementById("myAudio");
+	
+	// Set the current time to the desired interval (in seconds)
+	audio.currentTime = 14;
+	
+	// Play the audio
+	audio.play();
+  </script>
 </body>
 </html>
+
